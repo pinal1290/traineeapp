@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">softices</string>
+
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="create_an_account">Create An Account</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="email_id">Email</string>
+    <string name="forget_password">Forget Password</string>
+
+    <string name="first_name">Firstname</string>
+    <string name="last_name">Lastname</string>
+    <string name="sign_up_email">Email</string>
+    <string name="gender">Gender:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="pincode">Pincode</string>
+    <string name="sign_up_password"> Password</string>
+    <string name="sign_up_confirm_password">Confirm Password</string>
+    <string name="Already_have_an_account_Log_In">Already have an account? Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="latitude">Latitude:</string>
+    <string name="longitude">Longitude:</string>
+    <string name="title_activity_scrollview">ScrollviewActivity</string>
+    <string name="scroll_view">Scroll View</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_mute">Mute</string>
+    <string name="menu_user">User</string>
+    <string name="menu_broadcast_receivers">Broadcast receivers</string>
+    <string name="menu_services">Services</string>
+    <string name="menu_contant_providers">Contant Providers</string>
+    <string name="menu_google_maps">Google Maps</string>
+    <string name="menu_web_services">Web Services</string>
+    <string name="menu_firebace">Firebace</string>
+    <string name="menu_userrecord">User Record</string>
+    <string name="menu_log_out">Log Out</string>
+
+    <string name="bettery_percentage">Bettery percentage</string>
+
+    <string name="firstone_name">pooja</string>
+    <string name="firstnumber">8128622343</string>
+    <string name="profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="delete">Delete</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_google_maps">Map</string>
+    <string name="get">get</string>
+    <string name="post">post</string>
+    <string name="put">put</string>
+    <string name="menu_async">Dialog</string>
+    <string name="home">Home</string>
+    <string name="log_out">Log Out</string>
+    <string name="action_user"> Users</string>
+
+    <string name="dialog_message">Welcome to Alert Dialog</string>
+    <string name="dialog_title">Javatpoint Alert Dialog</string>
+    <string name="progress_bar">Progress bar</string>
+    <string name="download">Download</string>
+</resources>

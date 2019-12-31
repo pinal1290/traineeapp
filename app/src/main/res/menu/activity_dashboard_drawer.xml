@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/menu_profile" />
+        <item
+            android:id="@+id/nav_User"
+            android:title="@string/menu_user"/>
+        <item
+            android:id="@+id/nav_broadcast_receivers"
+            android:title="@string/menu_broadcast_receivers"/>
+        <item
+            android:id="@+id/nav_services"
+            android:title="@string/menu_services"/>
+        <item
+            android:id="@+id/nav_contant_providers"
+            android:title="@string/menu_contant_providers"/>
+        <item
+            android:id="@+id/nav_google_maps"
+            android:title="@string/menu_google_maps"/>
+        <item
+            android:id="@+id/nav_web_services"
+            android:title="@string/menu_web_services"/>
+        <item
+            android:id="@+id/nav_firebace"
+            android:title="@string/menu_firebace"/>
+        <item
+            android:id="@+id/nav_async"
+            android:title="@string/menu_async"/>
+    </group>
+</menu>
