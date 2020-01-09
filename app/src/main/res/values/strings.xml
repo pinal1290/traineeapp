@@ -71,4 +71,13 @@
     <string name="dialog_title">Javatpoint Alert Dialog</string>
     <string name="progress_bar">Progress bar</string>
     <string name="download">Download</string>
+    <string name="msg_token_fmt">My Notification</string>
+    <string name="main_activity" />
+    <string name="firebase_activity" />
+    <string name="default_notification_channel_id" >Notification</string>
+    <string name="default_notification_channel_name" />
+    <string name="subscribebutton">subscribebutton</string>
+    <string name="logtokenbutton">logtoken</string>
+    <string name="msg_subscribed">subscribe</string>
+    <string name="msg_subscribe_failed">subscribe faile</string>
 </resources>

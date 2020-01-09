@@ -2,6 +2,7 @@ package com.example.softices;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.content.IntentFilter;
 public class BroadcastReceiverActivity extends AppCompatActivity {
 
     BroadcastReceiver battery = new BroadcastReceiver() {
+        @SuppressLint("SetTextI18n")
         @Override
         public void onReceive(Context context, Intent intent) {
             int level = intent.getIntExtra("level", 0);

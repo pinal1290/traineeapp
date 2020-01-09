@@ -9,12 +9,14 @@
         android:id="@+id/txt_name"
         android:text="@string/firstone_name"
         android:textStyle="bold"
+        android:textColor="@color/gray"
         android:textSize="30dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt_number"
         android:text="@string/firstnumber"
+        android:textColor="@color/navy"
         android:layout_below="@+id/txt_name"
         android:textSize="30dp"
         android:textStyle="bold"/>

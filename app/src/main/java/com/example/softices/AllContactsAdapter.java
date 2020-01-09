@@ -50,7 +50,7 @@ public class AllContactsAdapter extends RecyclerView.Adapter<AllContactsAdapter.
         public ContactViewHolder(View itemView) {
             super(itemView);
             tvContactName = itemView.findViewById(R.id.txt_name);
-            tvPhoneNumber = itemView.findViewById(R.id.txt_name);
+            tvPhoneNumber = itemView.findViewById(R.id.txt_number);
         }
     }
 }

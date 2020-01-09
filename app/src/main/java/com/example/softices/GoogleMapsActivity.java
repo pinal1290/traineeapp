@@ -48,12 +48,15 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
     private LocationManager mLocationManager;
     private LocationRequest mLocationRequest;
     private com.google.android.gms.location.LocationListener listener;
-    private long UPDATE_INTERVAL = 2 * 1000;  /* 10 secs */
-    private long FASTEST_INTERVAL = 20000; /* 20 sec */
+    private long FASTEST_INTERVAL; /* 20 sec */
 
     private LocationManager locationManager;
     private LatLng latLng;
     private boolean isPermission;
+
+    public GoogleMapsActivity() {
+        FASTEST_INTERVAL = 20000;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +68,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
             //it was pre written
             SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                     .findFragmentById(R.id.map);
+            assert mapFragment != null;
             mapFragment.getMapAsync(this);
             mLatitudeTextView = (TextView) findViewById((R.id.latitude_textview));
             mLongitudeTextView = (TextView) findViewById((R.id.longitude_textview));
@@ -123,8 +127,8 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         }
         if (mLocation != null) {
 
-            // mLatitudeTextView.setText(String.valueOf(mLocation.getLatitude()));
-            //mLongitudeTextView.setText(String.valueOf(mLocation.getLongitude()));
+//             mLatitudeTextView.setText(String.valueOf(mLocation.getLatitude()));
+//            mLongitudeTextView.setText(String.valueOf(mLocation.getLongitude()));
         } else {
             Toast.makeText(this, "Location not Detected", Toast.LENGTH_SHORT).show();
         }
@@ -144,8 +148,8 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
     @Override
     public void onLocationChanged(Location location) {
         String msg = "Updated Location: " +
-                Double.toString(location.getLatitude()) + "," +
-                Double.toString(location.getLongitude());
+                (location.getLatitude()) + "," +
+                (location.getLongitude());
         mLatitudeTextView.setText(String.valueOf(location.getLatitude()));
         mLongitudeTextView.setText(String.valueOf(location.getLongitude()));
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
@@ -156,11 +160,14 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         //it was pre written
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
     protected void startLocationUpdates() {
         // Create the location request
+        /* 10 secs */
+        long UPDATE_INTERVAL = 2 * 1000;
         mLocationRequest = LocationRequest.create()
                 .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                 .setInterval(UPDATE_INTERVAL)
@@ -178,7 +185,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
         }
         LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient,
                 mLocationRequest, this);
-        Log.d("reque", "--->>>>");
+        Log.e("reque", "--->>>>");
     }
 
     @Override
@@ -227,6 +234,7 @@ public class GoogleMapsActivity extends FragmentActivity implements OnMapReadyCa
 
     private boolean isLocationEnabled() {
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        assert locationManager != null;
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) ||
                 locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
