@@ -28,6 +28,13 @@ gradlew
 gradlew.bat
 local.properties
 java/
+gradle
+
+
+java
+local.properties
+org
+
 
 # Local configuration file (sdk path, etc)
 local.properties
