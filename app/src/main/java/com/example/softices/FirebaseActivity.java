@@ -46,7 +46,7 @@ public class FirebaseActivity extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             msg = "failed.";
 
-                            Log.d(TAG, msg);
+                            Log.e(TAG, msg);
                             return;
                         }
                         Toast.makeText(FirebaseActivity.this, msg, Toast.LENGTH_SHORT).show();

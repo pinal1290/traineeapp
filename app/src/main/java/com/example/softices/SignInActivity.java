@@ -30,6 +30,7 @@ public class SignInActivity extends AppCompatActivity {
     EditText emailEditText, passwordEditText;
     DatabaseHelper databaseHelper = new DatabaseHelper(this);
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
