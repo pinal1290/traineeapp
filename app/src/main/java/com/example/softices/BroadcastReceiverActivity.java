@@ -31,5 +31,6 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_broadcast_receiver);
 
         registerReceiver(battery, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        registerReceiver(battery,new IntentFilter(Intent.ACTION_BATTERY_LOW));
     }
 }

@@ -34,15 +34,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
         <service
             android:name=".MyFirebaseMessagingService"
-            android:enabled="true"
-            android:exported="true"
-            android:permission="TODO">
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_menu_camera" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
 
         <activity android:name=".DialogActivity" />
         <activity android:name=".Delete" />
@@ -69,7 +76,9 @@
         <activity android:name=".WebServicesActivity" />
         <activity android:name=".ContentProvidersActivity" />
         <activity android:name=".ServicesActivity" />
-        <activity android:name=".BroadcastReceiverActivity" />
+        <activity android:name=".BroadcastReceiverActivity" >
+
+        </activity>
         <activity android:name=".UserActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".SplashActivity">
