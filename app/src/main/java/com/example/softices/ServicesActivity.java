@@ -25,6 +25,7 @@ public class ServicesActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
+
         if (view == buttonStart) {
             startService(new Intent(this, MyService.class));
         } else if (view == buttonStop) {

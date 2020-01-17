@@ -27,7 +27,6 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_receiver);
-
         registerReceiver(battery, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }
 }
