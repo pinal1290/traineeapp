@@ -77,7 +77,10 @@
         <activity android:name=".ContentProvidersActivity" />
         <activity android:name=".ServicesActivity" />
         <activity android:name=".BroadcastReceiverActivity" >
-
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
+                <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
+            </intent-filter>
         </activity>
         <activity android:name=".UserActivity" />
         <activity android:name=".ProfileActivity" />
