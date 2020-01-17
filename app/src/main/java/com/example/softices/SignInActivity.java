@@ -43,22 +43,23 @@ public class SignInActivity extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     private static String tag = "traineeapp";
     private RequestQueue mRequestQueue;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        try {
-            MultiDex.install(this);
-            sInstance = this;
-        } catch (Exception e) {
-            Log.e(tag + "error", e + "");
-        }
-
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
-
-        FirebaseApp.initializeApp(this);
+//        try {
+//            MultiDex.install(this);
+//            sInstance = this;
+//        } catch (Exception e) {
+//            Log.e(tag + "error", e + "");
+//        }
+//
+//        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+//        StrictMode.setVmPolicy(builder.build());
+//
+//        FirebaseApp.initializeApp(this);
         emailEditText = findViewById(R.id.edt_signinemail);
         passwordEditText = findViewById(R.id.edt_password);
         emailEditText.setText("pooja@gmail.com");
@@ -107,46 +108,48 @@ public class SignInActivity extends AppCompatActivity {
 //                                Toast.makeText(SignInActivity.this, msg, Toast.LENGTH_SHORT).show();
 //                            }
 //                        });
+
                 Intent intent = new Intent(SignInActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
     }
-    public void attachBaseContext(Context base) {
-        MultiDex.install(base);
-        super.attachBaseContext(base);
-    }
 
-    public static SignInActivity getsInstance() {
-        return sInstance;
-    }
-
-    public static Context getAppContext() {
-        return sInstance.getApplicationContext();
-    }
-
-    public RequestQueue getRequestQueue() {
-        if (mRequestQueue == null) {
-            mRequestQueue = Volley.newRequestQueue(getApplicationContext());
-        }
-        return mRequestQueue;
-    }
-
-    public <T> void add(Request<T> req, String tag) {
-        // set the default tag if tag is empty
-        req.setTag(TextUtils.isEmpty(tag) ? tag : tag);
-        getRequestQueue().add(req);
-    }
-
-    public <T> void add(Request<T> req) {
-        req.setTag(tag);
-        getRequestQueue().add(req);
-    }
-
-    public SignInActivity() {
-        super();
-    }
+    //    public void attachBaseContext(Context base) {
+//        MultiDex.install(base);
+//        super.attachBaseContext(base);
+//    }
+//
+//    public static SignInActivity getsInstance() {
+//        return sInstance;
+//    }
+//
+//    public static Context getAppContext() {
+//        return sInstance.getApplicationContext();
+//    }
+//
+//    public RequestQueue getRequestQueue() {
+//        if (mRequestQueue == null) {
+//            mRequestQueue = Volley.newRequestQueue(getApplicationContext());
+//        }
+//        return mRequestQueue;
+//    }
+//
+//    public <T> void add(Request<T> req, String tag) {
+//        // set the default tag if tag is empty
+//        req.setTag(TextUtils.isEmpty(tag) ? tag : tag);
+//        getRequestQueue().add(req);
+//    }
+//
+//    public <T> void add(Request<T> req) {
+//        req.setTag(tag);
+//        getRequestQueue().add(req);
+//    }
+//
+//    public SignInActivity() {
+//        super();
+//    }
     private void savePreference(String email) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = sharedPreferences.edit();

@@ -186,8 +186,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     null,       //group the rows
                     null,       //filter by row groups
                     sortOrder); //The sort order
-
-
             if (cursor.moveToFirst()) {
                 do {
                     UserModel user = new UserModel();
@@ -203,7 +201,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
             cursor.close();
             db.close();
-
             return userList;
         } catch (Exception e) {
             Log.e("fetchUser", e.toString());

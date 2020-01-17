@@ -35,6 +35,7 @@ TextView txtdelete;
                         Log.e("Response",response);
                         txtdelete.setText(response);
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"delete Successfully",Toast.LENGTH_SHORT).show();
                     }
                 },
                 new Response.ErrorListener()

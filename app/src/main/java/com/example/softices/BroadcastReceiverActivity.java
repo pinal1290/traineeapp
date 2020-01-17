@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.content.IntentFilter;
 
 public class BroadcastReceiverActivity extends AppCompatActivity {
-
     BroadcastReceiver battery = new BroadcastReceiver() {
         @SuppressLint("SetTextI18n")
         @Override
@@ -21,16 +20,14 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
             ProgressBar pgb = findViewById(R.id.pgb_battery);
             pgb.setProgress(level);
             TextView txt = findViewById(R.id.txt_bettery);
-            txt.setText("battery percentage:" + Integer.toString(level) + "%");
+            txt.setText("battery percentage:" + (level) + "%");
         }
     };
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_broadcast_receiver);
 
         registerReceiver(battery, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
-        registerReceiver(battery,new IntentFilter(Intent.ACTION_BATTERY_LOW));
     }
 }

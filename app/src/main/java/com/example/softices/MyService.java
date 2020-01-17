@@ -2,10 +2,13 @@ package com.example.softices;
 
 import android.app.Service;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 import android.provider.Settings;
 import android.widget.Toast;
+
+import java.net.URI;
 
 public class MyService extends Service {
     private MediaPlayer player;
@@ -24,6 +27,7 @@ public class MyService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         Toast.makeText(this, "Service Start Successfully.", Toast.LENGTH_SHORT).show();
         player = MediaPlayer.create(this, Settings.System.DEFAULT_RINGTONE_URI);
+        player.setAudioStreamType(AudioManager.STREAM_MUSIC);
         player.setLooping(true);
         player.start();
         return START_STICKY;

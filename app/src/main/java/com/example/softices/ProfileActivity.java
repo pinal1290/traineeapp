@@ -101,7 +101,6 @@ public class ProfileActivity extends AppCompatActivity {
         btnupdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String firstName = firstEdittText.getText().toString();
                 String lastName = LastEdittText.getText().toString();
                 int selectedId = rdggender.getCheckedRadioButtonId();
