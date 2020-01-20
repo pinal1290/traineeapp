@@ -36,7 +36,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <service
-            android:name=".MyFirebaseMessagingService"
+            android:name=".services.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -51,8 +51,8 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".DialogActivity" />
-        <activity android:name=".Delete" />
+        <activity android:name=".activities.DialogActivity" />
+        <activity android:name=".activities.Delete" />
         <activity android:name=".Put" />
         <activity android:name=".Post" />
         <activity android:name=".Get" />
@@ -69,22 +69,22 @@
             android:value="AIzaSyAuLZ1j6vv_rwQURJ5I36EzlHV3Bgi8J18" />
 
         <activity
-            android:name=".GoogleMapsActivity"
+            android:name=".activities.GoogleMapsActivity"
             android:label="@string/title_activity_google_maps" />
-        <activity android:name=".SingleContact" />
-        <activity android:name=".FirebaseActivity" />
-        <activity android:name=".WebServicesActivity" />
-        <activity android:name=".ContentProvidersActivity" />
-        <activity android:name=".ServicesActivity" />
-        <activity android:name=".BroadcastReceiverActivity" >
+        <activity android:name=".model.contactproviderModel" />
+        <activity android:name=".activities.FirebaseActivity" />
+        <activity android:name=".activities.WebServicesActivity" />
+        <activity android:name=".activities.ContentProvidersActivity" />
+        <activity android:name=".activities.ServicesActivity" />
+        <activity android:name=".activities.BroadcastReceiverActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.ACTION_BATTERY_LOW" />
                 <action android:name="android.intent.action.ACTION_BATTERY_OKAY" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activities.UserActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -93,15 +93,15 @@
         </activity>
 
         <service
-            android:name=".MyService"
+            android:name=".services.MyService"
             android:enabled="true"
             android:exported="true"
             android:permission="" />
 
-        <activity android:name=".forgetpasswordActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".DashboardActivity" />
+        <activity android:name=".activities.forgetpasswordActivity" />
+        <activity android:name=".activities.SignInActivity" />
+        <activity android:name=".activities.SignUpActivity" />
+        <activity android:name=".activities.DashboardActivity" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="default_channel_id"/>
