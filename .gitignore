@@ -27,7 +27,6 @@ org
 gradlew
 gradlew.bat
 local.properties
-java/
 gradle
 java
 local.properties
