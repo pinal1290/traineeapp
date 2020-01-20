@@ -9,7 +9,7 @@
         android:id="@+id/txt_name"
         android:text="@string/firstone_name"
         android:textStyle="bold"
-        android:textColor="@color/gray"
+        android:textColor="@color/navy"
         android:textSize="30dp"/>
     <TextView
         android:layout_width="match_parent"
