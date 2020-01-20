@@ -52,10 +52,10 @@
             android:resource="@color/colorAccent" />
 
         <activity android:name=".activities.DialogActivity" />
-        <activity android:name=".activities.Delete" />
-        <activity android:name=".Put" />
-        <activity android:name=".Post" />
-        <activity android:name=".Get" />
+        <activity android:name=".activities.DeleteActivity" />
+        <activity android:name=".activities.PutActivity" />
+        <activity android:name=".activities.PostActivity" />
+        <activity android:name=".activities.GetActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -71,7 +71,6 @@
         <activity
             android:name=".activities.GoogleMapsActivity"
             android:label="@string/title_activity_google_maps" />
-        <activity android:name=".model.contactproviderModel" />
         <activity android:name=".activities.FirebaseActivity" />
         <activity android:name=".activities.WebServicesActivity" />
         <activity android:name=".activities.ContentProvidersActivity" />
