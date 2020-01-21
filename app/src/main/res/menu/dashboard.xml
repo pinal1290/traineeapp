@@ -12,6 +12,7 @@
         android:id="@+id/action_profile"
         android:title="@string/menu_profile" />
     <item
-        android:id="@+id/action_user"
-        android:title="@string/action_user" />
+        android:id="@+id/action_setting"
+        android:icon="@drawable/ic_stat_name"
+        android:title="@string/menu_setting" />
 </menu>

@@ -125,7 +125,8 @@ public class ProfileActivity extends AppCompatActivity {
                 } else {
                     userModel.setGender(mygender);
                     userModel.setFirstname(firstName);
-                    userModel.setImage(getImageBytes(myBitmap));
+                    if (myBitmap != null)
+                        userModel.setImage(getImageBytes(myBitmap));
                     userModel.setLastname(lastName);
                     userModel.setAddress(address);
                     userModel.setCity(city);
@@ -224,30 +225,6 @@ public class ProfileActivity extends AppCompatActivity {
         return chooserIntent;
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.dashboard, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_log_out) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
     /**
      * Create a chooser intent to select the source to get image from.<br />
      * The source can be camera's (ACTION_IMAGE_CAPTURE) or gallery's (ACTION_GET_CONTENT).<br />
