@@ -50,8 +50,8 @@ public class DashboardActivity extends AppCompatActivity implements
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.dashboard, menu);
-        menu.add(1, 1, 1, menuIconWithText(getResources().getDrawable(R.drawable.ic_menu_camera),
-                getResources().getString(R.string.action_user)));
+//        menu.add(1, 1, 1, menuIconWithText(getResources().getDrawable(R.drawable.ic_menu_camera),
+//                getResources().getString(R.string.action_user)));
         return true;
     }
 
@@ -65,11 +65,14 @@ public class DashboardActivity extends AppCompatActivity implements
             logout();
             return true;
         } else if (id == R.id.action_profile) {
-            startActivity(new Intent(this, ProfileActivity.class));
+//            startActivity(new Intent(this, ProfileActivity.class));
             return true;
-        } else if (id == 1) {
+        } else if (id == R.id.action_user) {
             startActivity(new Intent(this, UserActivity.class));
             return true;
+        }else if (id==R.id.action_settion){
+            startActivity(new Intent(this,SignInActivity.class));
+            return  true;
         }
         return super.onOptionsItemSelected(item);
     }

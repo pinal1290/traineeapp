@@ -1,18 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activities.DashboardActivity">
 
     <item
+        android:id="@+id/action_profile"
+        android:title="@string/menu_profile">
+        <menu>
+            <item
+                android:id="@+id/action_user"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/menu_user" />
+            <item
+                android:id="@+id/action_settion"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/menu_setting" />
+        </menu>
+    </item>
+    <item
         android:id="@+id/action_log_out"
         android:orderInCategory="100"
         android:title="@string/log_out" />
-    <item
-        android:id="@+id/action_profile"
-        android:title="@string/menu_profile" />
-    <item
-        android:id="@+id/action_setting"
-        android:icon="@drawable/ic_stat_name"
-        android:title="@string/menu_setting" />
+    
 </menu>
