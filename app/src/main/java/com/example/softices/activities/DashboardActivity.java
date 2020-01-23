@@ -52,7 +52,7 @@ public class DashboardActivity extends AppCompatActivity implements
         getMenuInflater().inflate(R.menu.dashboard, menu);
 //        menu.add(1, 1, 1, menuIconWithText(getResources().getDrawable(R.drawable.ic_menu_camera),
 //                getResources().getString(R.string.action_user)));
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     public boolean onOptionsItemSelected(MenuItem item) {
