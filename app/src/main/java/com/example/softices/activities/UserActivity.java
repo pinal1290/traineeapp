@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import com.example.softices.R;
 import com.example.softices.adapter.AllUserAdapter;
+import com.example.softices.database.DatabaseHelper;
 
 public class UserActivity extends AppCompatActivity {
     RecyclerView rcvusers;
