@@ -31,7 +31,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.softices.R;
-import com.example.softices.database.DatabaseHelper;
 import com.example.softices.model.UserModel;
 
 import java.io.ByteArrayOutputStream;

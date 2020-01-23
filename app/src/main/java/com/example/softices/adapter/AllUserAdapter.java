@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.softices.database.DatabaseHelper;
+import com.example.softices.activities.DatabaseHelper;
 import com.example.softices.activities.ProfileActivity;
 import com.example.softices.R;
 import com.example.softices.model.UserModel;
