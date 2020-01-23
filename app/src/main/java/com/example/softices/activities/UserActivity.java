@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.softices.R;
-import com.example.softices.activities.DatabaseHelper;
+import com.example.softices.database.DatabaseHelper;
 import com.example.softices.adapter.AllUserAdapter;
 
 public class UserActivity extends AppCompatActivity {

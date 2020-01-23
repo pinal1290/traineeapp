@@ -24,8 +24,6 @@ import android.os.Parcelable;
 import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +32,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.softices.R;
+import com.example.softices.database.DatabaseHelper;
 import com.example.softices.model.UserModel;
 
 import java.io.ByteArrayOutputStream;
