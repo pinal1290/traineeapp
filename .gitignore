@@ -30,6 +30,8 @@ local.properties
 gradle
 local.properties
 org
+debug/res/values
+java/lang
 
 
 # Local configuration file (sdk path, etc)
