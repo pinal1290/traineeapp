@@ -31,7 +31,7 @@ gradle
 local.properties
 org
 java
-debug/
+
 
 # Local configuration file (sdk path, etc)
 local.properties
