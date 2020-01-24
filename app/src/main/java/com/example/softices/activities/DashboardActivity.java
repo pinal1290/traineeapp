@@ -71,7 +71,7 @@ public class DashboardActivity extends AppCompatActivity implements
             startActivity(new Intent(this, UserActivity.class));
             return true;
         }else if (id==R.id.action_settion){
-            startActivity(new Intent(this,SignInActivity.class));
+            startActivity(new Intent(this,BroadcastReceiverActivity.class));
             return  true;
         }
         return super.onOptionsItemSelected(item);

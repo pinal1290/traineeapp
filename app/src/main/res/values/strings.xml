@@ -36,7 +36,7 @@
 
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
-    <string name="menu_setting">Setting</string>
+    <string name="menu_setting">Broadcast receiver</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_mute">Mute</string>
     <string name="menu_user">User</string>
