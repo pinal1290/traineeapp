@@ -81,4 +81,7 @@
     <string name="logtokenbutton">logtoken</string>
     <string name="msg_subscribed">subscribe</string>
     <string name="msg_subscribe_failed">subscribe faile</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="start_ringtone">Start ringtone</string>
+    <string name="services">Services</string>
 </resources>

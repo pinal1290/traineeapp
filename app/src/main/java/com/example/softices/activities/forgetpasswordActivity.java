@@ -3,10 +3,13 @@ package com.example.softices.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.softices.R;
@@ -17,12 +20,18 @@ import java.util.regex.Pattern;
 public class forgetpasswordActivity extends AppCompatActivity {
     TextView txtforgetpass;
     EditText edtemail;
+    ImageView imgframe;
+    FrameLayout frmforgetpass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgetpassword);
         init();
+        final TextView textView=new TextView(this);
+        textView.setText("android example");
+        textView.setTextSize(20);
+        frmforgetpass.addView(textView);
         txtforgetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +61,24 @@ public class forgetpasswordActivity extends AppCompatActivity {
                 forgetpasswordActivity.this.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
             }
         });
+        imgframe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(txtforgetpass.getVisibility()== View.GONE){
+                    textView.setVisibility(View.VISIBLE);
+                    frmforgetpass.setBackgroundColor(Color.MAGENTA);
+                } else {
+                    textView.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     public void init() {
         edtemail = findViewById(R.id.edt_email);
         txtforgetpass = findViewById(R.id.txt_forget_password);
+        frmforgetpass = findViewById(R.id.frm_forget_password);
+        imgframe=findViewById(R.id.img_frameimage);
     }
 
     boolean isValidEmail(String email) {

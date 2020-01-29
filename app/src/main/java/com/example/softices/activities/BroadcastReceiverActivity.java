@@ -21,6 +21,8 @@ public class BroadcastReceiverActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             int level = intent.getIntExtra("level", 0);
             ProgressBar pgb = findViewById(R.id.pgb_battery);
+            ProgressBar pgbbtry=findViewById(R.id.pgb_btry);
+            pgbbtry.setProgress(level);
             pgb.setProgress(level);
             TextView txt = findViewById(R.id.txt_bettery);
             txt.setText("battery percentage:" + (level) + "%");

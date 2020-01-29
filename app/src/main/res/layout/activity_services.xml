@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Services"
-        android:textSize="50dp"
+        android:text="@string/services"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <Button
@@ -17,7 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/navy"
-        android:text="Start ringtone"
+        android:layout_marginTop="20dp"
+        android:text="@string/start_ringtone"
         android:textColor="@color/red" />
 
     <Button
