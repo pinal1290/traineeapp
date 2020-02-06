@@ -13,6 +13,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:text="@string/profile"
+            style="@style/CustomfontStyle"
             android:textSize="50dp"
             android:textStyle="bold" />
 

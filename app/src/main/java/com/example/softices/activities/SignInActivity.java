@@ -24,7 +24,7 @@ public class SignInActivity extends AppCompatActivity {
     public static SignInActivity sInstance;
     EditText emailEditText, passwordEditText;
     Button btnSignIn;
-    TextView txtSignUp;
+    TextView txtSignUp, txtforgetpassword;
     DatabaseHelper databaseHelper = new DatabaseHelper(this);
     @SuppressLint("StaticFieldLeak")
     private static String tag = "traineeapp";
@@ -67,6 +67,14 @@ public class SignInActivity extends AppCompatActivity {
                 finish();
             }
         });
+        txtforgetpassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignInActivity.this,forgetpasswordActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     public void init() {
@@ -76,6 +84,7 @@ public class SignInActivity extends AppCompatActivity {
         passwordEditText.setText("12345678");
         btnSignIn = findViewById(R.id.btn_signin);
         txtSignUp = findViewById(R.id.txt_create_an_account);
+        txtforgetpassword = findViewById(R.id.txt_forget_pass);
     }
 
     private void savePreference(String email) {

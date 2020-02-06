@@ -75,13 +75,17 @@
     <string name="msg_token_fmt">My Notification</string>
     <string name="main_activity" />
     <string name="firebase_activity" />
-    <string name="default_notification_channel_id" >Notification</string>
+    <string name="default_notification_channel_id">Notification</string>
     <string name="default_notification_channel_name" />
     <string name="subscribebutton">subscribebutton</string>
     <string name="logtokenbutton">logtoken</string>
     <string name="msg_subscribed">subscribe</string>
     <string name="msg_subscribe_failed">subscribe faile</string>
-    <string name="reset_password">Reset Password</string>
-    <string name="start_ringtone">Start ringtone</string>
+s    <string name="start_ringtone">Start ringtone</string>
     <string name="services">Services</string>
+    <string name="forget_pass">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_pass">Confirm Password</string>
+    <string name="change_password">Submit</string>
 </resources>

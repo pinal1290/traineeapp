@@ -29,7 +29,7 @@ public class DialogActivity extends AppCompatActivity {
             public void onClick(View v) {
                 progressDialog = new ProgressDialog(DialogActivity.this);
                 progressDialog.setMax(100);
-                progressDialog.setMessage("Its loading....");
+                progressDialog.setMessage("It's loading....");
                 progressDialog.setTitle("ProgressDialog bar");
                 progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
                 progressDialog.show();

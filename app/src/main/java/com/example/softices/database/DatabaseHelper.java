@@ -95,6 +95,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * updateUser method use to update datail in TABLE_USER
+     *
      * @param userModel
      * @return
      */
@@ -121,6 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * getCurrentUser method use to perticular email in TABLE_USER
+     *
      * @param email
      * @return
      */
@@ -174,6 +176,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * fetchUser method use to fetch data in TABLE_USER
+     *
      * @return
      */
     public List<UserModel> fetchUser() {
@@ -221,8 +224,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean CheckPassword(String password) {
+        try {
+            String[] columns = {
+                    COLUMN_USER_PASSWORD
+            };
+            SQLiteDatabase db = this.getReadableDatabase();
+            String selection = COLUMN_USER_PASSWORD + " = ?";
+            String[] selectionArgs = {password};
+            Cursor cursor=db.query(
+                    TABLE_USER,
+                    columns,
+                    selection,
+                    selectionArgs,
+                    null,
+                    null,
+                    null);
+            int cursorCount=cursor.getCount();
+            cursor.close();
+            db.close();
+            if(cursorCount>0){
+                return true;
+            }
+        } catch (Exception e) {
+            Log.e("CheckPassword", e.toString());
+        }
+        return false;
+    }
+
     /**
      * checkUser method user to check existing data in TABLE_USER
+     *
      * @param email
      * @return
      */
@@ -255,6 +287,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * chechemailpassword method use to check email and password are not same in TABLE_USER
+     *
      * @param email
      * @param password
      * @return
@@ -288,6 +321,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * deleteuser method use to perticular data delete in TABLE_USER
+     *
      * @param userModel
      */
     public void deleteuser(UserModel userModel) {
